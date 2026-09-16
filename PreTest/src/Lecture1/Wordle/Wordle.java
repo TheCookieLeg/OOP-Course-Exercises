@@ -1,5 +1,6 @@
 package Lecture1.Wordle;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Wordle {
     public static String[] words = {
@@ -25,7 +26,7 @@ public class Wordle {
         return words[n];
     }
 
-    
+
 
 
 
