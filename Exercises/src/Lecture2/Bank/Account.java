@@ -36,4 +36,8 @@ public class Account {
         balance += amount;
         transactions.add(amount + "dkk was deposited to the account. New balance is " + balance + "dkk");
     }
+
+    public void addTransactionStatement(String arg) {
+        transactions.add(arg);
+    }
 }
