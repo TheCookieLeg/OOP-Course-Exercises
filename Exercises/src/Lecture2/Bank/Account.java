@@ -37,6 +37,15 @@ public class Account {
         transactions.add(amount + "dkk was deposited to the account. New balance is " + balance + "dkk");
     }
 
+    public void receiveTransfer(int amount) {
+        balance += amount;
+    }
+
+    public boolean sendTransfer(int amount) {
+        if (balance < amount) { return false; }
+        else { balance -= amount; return true; }
+    }
+
     public void addTransactionStatement(String arg) {
         transactions.add(arg);
     }
