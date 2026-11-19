@@ -2,6 +2,7 @@ package Lecture8.Person;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class PersonFactory implements IPersonFactory {
 
@@ -21,7 +22,15 @@ public class PersonFactory implements IPersonFactory {
 
     @Override
     public List<Person> generatePeople(int n) {
+        Random rand = new Random();
+        List<Person> people = new ArrayList<Person>();
+        for (int i = 0; i < n; i++) {
+            String firstName = firstNames[rand.nextInt(firstNames.length)];
+            String lastName = lastNames[rand.nextInt(lastNames.length)];
+            int age = rand.nextInt(80);
+            people.add(new Person(firstName, lastName, age));
+        }
 
-        return new ArrayList<Person>();
+        return people;
     }
 }
